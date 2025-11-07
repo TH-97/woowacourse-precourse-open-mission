@@ -1,0 +1,31 @@
+{
+  "name": "woowacourse-precourse-open-mission",
+  "private": true,
+  "version": "1.0.0",
+  "description": "게임 데이터를 이용한 객체 연습과 최적화",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "babel-jest": "^30.1.2",
+    "jest": "^30.1.2"
+  },
+  "jest": {
+    "transform": {
+      "\\.js$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "engines": {
+    "npm": ">=10.8.2",
+    "node": ">=22.19.0"
+  }
+}
