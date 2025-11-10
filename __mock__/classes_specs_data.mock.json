@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "Death Knight",
+    "specs": [
+      {
+        "id": 1,
+        "name": "Blood"
+      },
+      {
+        "id": 2,
+        "name": "Frost"
+      },
+      {
+        "id": 3,
+        "name": "Unholy"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Druid",
+    "specs": [
+      {
+        "id": 1,
+        "name": "Balance"
+      },
+      {
+        "id": 2,
+        "name": "Feral"
+      },
+      {
+        "id": 3,
+        "name": "Guardian"
+      },
+      {
+        "id": 4,
+        "name": "Restoration"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Hunter",
+    "specs": [
+      {
+        "id": 1,
+        "name": "Beast Mastery"
+      },
+      {
+        "id": 2,
+        "name": "Marksmanship"
+      },
+      {
+        "id": 3,
+        "name": "Survival"
+      }
+    ]
+  }
+]
