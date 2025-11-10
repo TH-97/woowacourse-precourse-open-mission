@@ -1,0 +1,337 @@
+[
+  {
+    "id": 40,
+    "name": "Blackrock Depths",
+    "frozen": true,
+    "encounters": [
+      {
+        "id": 3042,
+        "name": "Lord Roccor"
+      },
+      {
+        "id": 3044,
+        "name": "Bael'Gar"
+      },
+      {
+        "id": 3043,
+        "name": "Lord Incendius"
+      },
+      {
+        "id": 3046,
+        "name": "Golem Lord Argelmach"
+      },
+      {
+        "id": 3048,
+        "name": "The Seven"
+      },
+      {
+        "id": 3045,
+        "name": "General Angerforge"
+      },
+      {
+        "id": 3047,
+        "name": "Ambassador Flamelash"
+      },
+      {
+        "id": 3049,
+        "name": "Emperor Dagran Thaurissan"
+      }
+    ],
+    "brackets": {
+      "min": 590,
+      "max": 639,
+      "bucket": 3,
+      "type": "Item Level"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Delves",
+    "frozen": false,
+    "encounters": [
+      {
+        "id": 3326,
+        "name": "Nexus-Princess Ky'veza ?"
+      },
+      {
+        "id": 3325,
+        "name": "Nexus-Princess Ky'veza ??"
+      },
+      {
+        "id": 3126,
+        "name": "The Underpin ?"
+      },
+      {
+        "id": 3138,
+        "name": "The Underpin ??"
+      },
+      {
+        "id": 2985,
+        "name": "Zek'vir ?"
+      },
+      {
+        "id": 2987,
+        "name": "Zek'vir ??"
+      }
+    ],
+    "brackets": {
+      "min": 0,
+      "max": 0,
+      "bucket": 1,
+      "type": "Item Level"
+    },
+    "partitions": [
+      {
+        "name": "11.0",
+        "compact": "11.0"
+      },
+      {
+        "name": "11.1",
+        "compact": "11.1"
+      },
+      {
+        "name": "11.2",
+        "compact": "11.2",
+        "default": true
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Liberation of Undermine",
+    "frozen": true,
+    "encounters": [
+      {
+        "id": 3009,
+        "name": "Vexie and the Geargrinders"
+      },
+      {
+        "id": 3010,
+        "name": "Cauldron of Carnage"
+      },
+      {
+        "id": 3011,
+        "name": "Rik Reverb"
+      },
+      {
+        "id": 3012,
+        "name": "Stix Bunkjunker"
+      },
+      {
+        "id": 3013,
+        "name": "Sprocketmonger Lockenstock"
+      },
+      {
+        "id": 3014,
+        "name": "One-Armed Bandit"
+      },
+      {
+        "id": 3015,
+        "name": "Mug'Zee, Heads of Security"
+      },
+      {
+        "id": 3016,
+        "name": "Chrome King Gallywix"
+      }
+    ],
+    "brackets": {
+      "min": 633,
+      "max": 690,
+      "bucket": 3,
+      "type": "Item Level"
+    },
+    "partitions": [
+      {
+        "id": 1,
+        "name": "11.1",
+        "compact": "11.1",
+        "default": false,
+        "startTime": 1741046400,
+        "relevantForCharacter": true,
+        "excludeFromZoneHeader": false
+      },
+      {
+        "id": 2,
+        "name": "11.1.5",
+        "compact": "11.1.5",
+        "default": false,
+        "startTime": 1745280000,
+        "relevantForCharacter": true,
+        "excludeFromZoneHeader": false
+      },
+      {
+        "id": 3,
+        "name": "11.1.7",
+        "compact": "11.1.7",
+        "default": true,
+        "startTime": 1750118400,
+        "relevantForCharacter": true,
+        "excludeFromZoneHeader": false
+      },
+      {
+        "id": 4,
+        "name": "11.2",
+        "compact": "11.2",
+        "default": true,
+        "startTime": 1754352000,
+        "relevantForCharacter": false,
+        "excludeFromZoneHeader": true
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Mythic+ Season 2",
+    "frozen": true,
+    "encounters": [
+      {
+        "id": 12661,
+        "name": "Cinderbrew Meadery"
+      },
+      {
+        "id": 12651,
+        "name": "Darkflame Cleft"
+      },
+      {
+        "id": 12773,
+        "name": "Operation: Floodgate"
+      },
+      {
+        "id": 112098,
+        "name": "Operation: Mechagon - Workshop"
+      },
+      {
+        "id": 12649,
+        "name": "Priory of the Sacred Flame"
+      },
+      {
+        "id": 61594,
+        "name": "The MOTHERLODE!!"
+      },
+      {
+        "id": 12648,
+        "name": "The Rookery"
+      },
+      {
+        "id": 62293,
+        "name": "Theater of Pain"
+      }
+    ],
+    "brackets": {
+      "min": 1,
+      "max": 25,
+      "bucket": 1,
+      "type": "Keystone Level"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Manaforge Omega",
+    "frozen": false,
+    "encounters": [
+      {
+        "id": 3129,
+        "name": "Plexus Sentinel"
+      },
+      {
+        "id": 3131,
+        "name": "Loom'ithar"
+      },
+      {
+        "id": 3130,
+        "name": "Soulbinder Naazindhri"
+      },
+      {
+        "id": 3132,
+        "name": "Forgeweaver Araz"
+      },
+      {
+        "id": 3122,
+        "name": "The Soul Hunters"
+      },
+      {
+        "id": 3133,
+        "name": "Fractillus"
+      },
+      {
+        "id": 3134,
+        "name": "Nexus-King Salhadaar"
+      },
+      {
+        "id": 3135,
+        "name": "Dimensius, the All-Devouring"
+      }
+    ],
+    "brackets": {
+      "min": 679,
+      "max": 731,
+      "bucket": 3,
+      "type": "Item Level"
+    },
+    "partitions": [
+      {
+        "id": 1,
+        "name": "11.2",
+        "compact": "11.2",
+        "default": false,
+        "startTime": 1754956800,
+        "relevantForCharacter": true,
+        "excludeFromZoneHeader": false
+      },
+      {
+        "id": 2,
+        "name": "11.2.5",
+        "compact": "11.2.5",
+        "default": true,
+        "startTime": 1759795200,
+        "relevantForCharacter": true,
+        "excludeFromZoneHeader": false
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Mythic+ Season 3",
+    "frozen": false,
+    "encounters": [
+      {
+        "id": 62660,
+        "name": "Ara-Kara, City of Echoes"
+      },
+      {
+        "id": 12830,
+        "name": "Eco-Dome Al'dani"
+      },
+      {
+        "id": 62287,
+        "name": "Halls of Atonement"
+      },
+      {
+        "id": 62773,
+        "name": "Operation: Floodgate"
+      },
+      {
+        "id": 62649,
+        "name": "Priory of the Sacred Flame"
+      },
+      {
+        "id": 112442,
+        "name": "Tazavesh: So'leah's Gambit"
+      },
+      {
+        "id": 112441,
+        "name": "Tazavesh: Streets of Wonder"
+      },
+      {
+        "id": 62662,
+        "name": "The Dawnbreaker"
+      }
+    ],
+    "brackets": {
+      "min": 2,
+      "max": 25,
+      "bucket": 1,
+      "type": "Keystone Level"
+    }
+  }
+]
