@@ -24,7 +24,7 @@ export class Class {
     const classSpecMap = new Map(
       this.#classes.map((classInfo) => [
         classInfo.id,
-        new Spec(classInfo.specs).creatSpecMap(),
+        new Spec(classInfo.specs).createSpecMap(),
       ])
     );
     return classSpecMap;
