@@ -5,8 +5,11 @@
 - seasonController에서 데이터를 받아 객체로 검사 및 map 생성([예외 상황1](#예외-상황-1))
 - classController에서 class데이터를 받아 객체로 검사 및 class정보가 담겨있는 map 생성([예외 상황2](#예외-상황-2))
 - classController에서 class데이터를 받아 객체로 검사 및 spec정보가 담겨있는 map 생성([예외 상황3](#예외-상황-3))
-- 불러온 class 이름으로 guide message 출력
+- 불러온 class 이름으로 message 출력
 - 이름 입력받기([예외 상황4](#예외-상황-4))
+- 불러온 spec 이름으로 message 출력
+- 이름 입력받기([예외 상황4](#예외-상황-4))
+- 입력받은 값을 이용하여 데이터 가져오기
 
 ## 예외 상황
 
