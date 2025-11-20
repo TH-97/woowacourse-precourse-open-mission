@@ -1,40 +1,35 @@
-import { CurrentSeason } from "../src/model/season/CurrentSeason.js";
-import __mock__apiSeasonData from "../__mock__/season.mock.json";
+import { CurrentSeason } from "../src/model/CurrentSeason.model.js";
+import { ERROR } from "../src/constants/index.js";
 
-describe("CurrentSeason 클래스 테스트", () => {
-  test("EncounterMap을 정확히 반환해야 한다", () => {
-    // given
-    const testData = __mock__apiSeasonData.find((season) => season.id === 45);
-    const correctResult = new Map([
-      [62660, "Ara-Kara, City of Echoes"],
-      [12830, "Eco-Dome Al'dani"],
-      [62287, "Halls of Atonement"],
-      [62773, "Operation: Floodgate"],
-      [62649, "Priory of the Sacred Flame"],
-      [112442, "Tazavesh: So'leah's Gambit"],
-      [112441, "Tazavesh: Streets of Wonder"],
-      [62662, "The Dawnbreaker"],
+describe("CurrentSeason 모델 테스트", () => {
+  const testSeasonData = {
+    id: 45,
+    name: "Mythic+ Season 3",
+    encounters: [
+      { id: 62660, name: "Ara-Kara, City of Echoes" },
+      { id: 12830, name: "Eco-Dome Al'dani" },
+    ],
+  };
+
+  test("값이 비어있으면 에러 발생", () => {
+    expect(() => new CurrentSeason(null)).toThrow(ERROR.EMPTY);
+  });
+
+  test("시즌 id가 45가 아니면 에러 발생", () => {
+    const invalidData = { ...testSeasonData, id: 44 };
+    expect(() => new CurrentSeason(invalidData)).toThrow(
+      ERROR.IS_NOT_CURRENT_SEASON
+    );
+  });
+
+  test("던전 데이터를 dungeonId와 dungeonName 형태로 반환해야 한다", () => {
+    const season = new CurrentSeason(testSeasonData);
+
+    const result = season.getCurrentSeasonDungeons();
+
+    expect(result).toEqual([
+      { dungeonId: 62660, dungeonName: "Ara-Kara, City of Echoes" },
+      { dungeonId: 12830, dungeonName: "Eco-Dome Al'dani" },
     ]);
-
-    // when
-    const currentSeason = new CurrentSeason(testData);
-    const result = currentSeason.creatEncounterMap();
-
-    // then
-    expect(result).toEqual(correctResult);
-  });
-  test("현재 시즌이 아닐시 예외 발생", () => {
-    const testData = __mock__apiSeasonData.find((season) => season.id === 44);
-
-    expect(() => {
-      new CurrentSeason(testData);
-    }).toThrow("[ERROR]");
-  });
-  test("시즌 id가 잘못 되어 값이 비었을 때 예외 발생", () => {
-    const testData = __mock__apiSeasonData.find((season) => season.id === 0);
-
-    expect(() => {
-      new CurrentSeason(testData);
-    }).toThrow("[ERROR]");
   });
 });
