@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "express": "^5.1.0",
-    "lowdb": "^7.0.1"
+    "lokijs": "^1.5.12"
   }
 }
