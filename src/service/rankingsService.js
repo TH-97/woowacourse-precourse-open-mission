@@ -31,7 +31,7 @@ export const rankingsService = {
     return data;
   },
   async getGear(data) {
-    const gearDTOs = data.map((ranking) => new RankingsDTO(ranking.gear));
+    const gearDTOs = data.map((ranking) => new RankingsDTO(ranking));
 
     return gearDTOs;
   },
