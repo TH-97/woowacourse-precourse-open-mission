@@ -1,6 +1,8 @@
 export const API = {
   WARCRAFTLOG_ZONE_URL: "https://www.warcraftlogs.com:443/v1/zones?",
   WARCRAFTLOG_CLASS_URL: "https://www.warcraftlogs.com:443/v1/classes?",
+  WARCRAFTLOG_RANKINGS_URL:
+    "https://www.warcraftlogs.com:443/v1/rankings/encounter/",
 };
 
 export const ERROR = {
