@@ -1,7 +1,7 @@
 import { API } from "../constants/index.js";
 import __mock__apiData from "../../__mock__/season.mock.json" with {type : "json"};
 import { ERROR } from "../constants/index.js";
-import { CurrentSeasonDto } from "../dto/currentSeasonDto.js";
+import { CurrentSeasonDto } from "../dto/CurrentSeasonDTO.js";
 import { EncounterDAO } from "../dao/EncounterDAO.js";
 import { Encounters } from "../model/Encounters.model.js";
 import { db } from "../db/db.js";
