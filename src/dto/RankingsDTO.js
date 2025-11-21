@@ -5,7 +5,7 @@ export class RankingsDTO {
 
   constructor(data) {
     this.#validate(data);
-    this.#gear = data;
+    this.#gear = data.gear;
   }
   #validate(data) {
     if (data.length === 0) throw new Error(ERROR.EMPTY);
