@@ -2,7 +2,7 @@ import { API } from "../constants/index.js";
 import { db } from "../db/db.js";
 import "dotenv/config";
 import fs from "fs/promises";
-import { RankingsDTO } from "../dto/RankingsDTO.js";
+import { GearListDTO } from "../dto/GearListDTO.js";
 
 const API_KEY = process.env.WARCRAFTLOG_API_KEY;
 const URL = API.WARCRAFTLOG_RANKINGS_URL;
@@ -31,8 +31,8 @@ export const rankingsService = {
     return data;
   },
   async getGear(data) {
-    const gearDTOs = data.map((ranking) => new RankingsDTO(ranking));
+    const gearListDTOs = data.map((ranking) => new GearListDTO(ranking));
 
-    return gearDTOs;
+    return gearListDTOs;
   },
 };
