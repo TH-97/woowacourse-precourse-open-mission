@@ -1,6 +1,5 @@
-import { API } from "../constants/index.js";
+import { API, ERROR } from "../constants/index.js";
 import __mock__apiData from "../../__mock__/season.mock.json" with {type : "json"};
-import { ERROR } from "../constants/index.js";
 import { CurrentSeasonDto } from "../dto/CurrentSeasonDTO.js";
 import { EncounterDAO } from "../dao/EncounterDAO.js";
 import { Encounters } from "../model/Encounters.model.js";
@@ -14,7 +13,7 @@ export const seasonService = {
   async loadCurrentSeasonData() {
     if (!API_KEY) throw new Error(ERROR.API_KEY_NOT_SET);
 
-    const url = `${URL}apikey=${API_KEY}`;
+    const url = `${URL}api_key=${API_KEY}`;
 
     try {
       const response = await fetch(url);

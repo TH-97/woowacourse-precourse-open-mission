@@ -1,8 +1,8 @@
-import { API } from "../constants/index.js";
-import "dotenv/config";
+import { API, ERROR } from "../constants/index.js";
 import fs from "fs/promises";
 import { URL } from "node:url";
 import { GearListDTO } from "../dto/GearListDTO.js";
+import "dotenv/config";
 
 const API_KEY = process.env.WARCRAFTLOG_API_KEY;
 const RANKINGS_URL = API.WARCRAFTLOG_RANKINGS_URL;
