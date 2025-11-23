@@ -14,6 +14,7 @@ export class Class {
 
   getTransformClassName() {
     const classNameObjects = this.#classDTOs.map((dto) => ({
+      classId: dto.getClassId(),
       className: dto.getClassName(),
     }));
 
@@ -22,7 +23,7 @@ export class Class {
 
   getTransformSpecsByName() {
     const specsByNameObjects = this.#classDTOs.map((dto) => ({
-      className: dto.getClassName(),
+      classId: dto.getClassId(),
       classSpec: dto.getSpecs(),
     }));
 
