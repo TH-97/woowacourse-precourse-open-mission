@@ -1,7 +1,11 @@
+import { GearDTO } from "./GearDTO.js";
+
 export class GearListDTO {
   #gearList;
-  constructor(data) {
-    this.#gearList = data.map((gear) => new GearDTO(gear));
+  constructor(gear) {
+    this.#gearList = gear.map(
+      (info) => new GearDTO({ name: info.name, icon: info.icon })
+    );
   }
 
   getGearList() {
