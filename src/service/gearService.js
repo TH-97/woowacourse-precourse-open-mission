@@ -50,7 +50,6 @@ export const gearService = {
   findRecommendSpecialSlot(items) {
     const sorted = this.buildCountMap(items);
 
-    console.log(sorted);
     const [key1] = sorted[0];
     const [key2] = sorted[1] || [null];
 
