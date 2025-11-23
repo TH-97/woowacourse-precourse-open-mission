@@ -13,14 +13,15 @@ export class Gear {
   }
   #getSlotWithIcon(slotIndex) {
     const gearListArray = this.#gearListDTOs.map((info) => info.getGearList());
-    return gearListArray.map((gears) => ({
+    const gaerObject = gearListArray.map((gears) => ({
       name: gears[slotIndex].getGearName(),
       icon: gears[slotIndex].getGearIcon(),
     }));
+    return gaerObject;
   }
 
   getHeads() {
-    return this.#getSlotWithIcon(0); // 0번째 슬롯
+    return this.#getSlotWithIcon(0);
   }
 
   getNecks() {
@@ -43,7 +44,7 @@ export class Gear {
     return this.#getSlotWithIcon(6);
   }
 
-  getFeets() {
+  getFeet() {
     return this.#getSlotWithIcon(7);
   }
 
