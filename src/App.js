@@ -1,31 +1,22 @@
-import { classController } from "./controller/classController/classController.js";
-import { outputController } from "./controller/outputController/outputController.js";
-import { seasonController } from "./controller/seasonController/seasonController.js";
-import { inputController } from "./controller/inputController/inputController.js";
-import { dataController } from "./controller/dataController/dataController.js";
+import { classController } from "./controller/classController.js";
+import { gearController } from "./controller/gearController.js";
+import { rankingsController } from "./controller/rankingsController.js";
+import { seasonController } from "./controller/seasonController.js";
 
 class App {
-  async run() {
-    const encounterMap = seasonController.loadCurrentSeasonEncounterMap();
-    const classNameToIdMap = classController.loadClassNameToIdMap();
-    const classSpecNameToIdMap = classController.loadClassSpecNameToIdMap();
-    outputController.showClassName(classNameToIdMap);
-    const inputClassName = await inputController.inputValue();
-    const classId = inputController.getClassId(
-      inputClassName,
-      classNameToIdMap
-    );
-    outputController.showSpecName(classId, classSpecNameToIdMap);
-    const inputSpecName = await inputController.inputValue();
-    const specId = inputController.getSpecId(
-      inputSpecName,
-      classSpecNameToIdMap,
-      classId
-    );
+  async init() {
+    await seasonController.syncSeasonData();
+    await classController.syncClassAndSpecData();
+  }
 
-    const recommendItemArray = dataController.loadRecommendItem();
-    outputController.showRecommendItem(recommendItemArray);
+  async runGearUpdate(dungeonId, classId, specId) {
+    const gearListDTOs = await rankingsController.getGearDTOs(
+      dungeonId,
+      classId,
+      specId
+    );
+    gearController.syncRecommendItem(gearListDTOs);
   }
 }
 
-export default App;
+export default new App();
