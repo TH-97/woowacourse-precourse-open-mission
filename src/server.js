@@ -28,8 +28,10 @@ app.get("/api/spec", (req, res) => {
 app.get("/api/getRecommedItem", async (req, res) => {
   const { dungeon: dungeonId, class: classId, spec: specId } = req.query;
   await App.runGearUpdate(dungeonId, classId, specId);
-  const recommendItems = db.getCollection("recommendItem").data;
+  const collection = db.getCollection("recommendItem");
+  const recommendItems = collection.data;
   res.json(recommendItems);
+  collection.clear();
 });
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
