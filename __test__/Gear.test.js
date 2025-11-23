@@ -38,6 +38,10 @@ describe("gear 클래스 테스트", () => {
 
     const result = gear.getHeads();
 
-    expect(result).toEqual(["Mock Helm", "Another Helm", "Third Helm"]);
+    expect(result).toEqual([
+      { name: "Mock Helm", icon: undefined },
+      { name: "Another Helm", icon: undefined },
+      { name: "Third Helm", icon: undefined },
+    ]);
   });
 });
