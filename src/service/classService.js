@@ -45,6 +45,6 @@ export const classService = {
     const classDTOs = data.map(classInfo => new ClassDTO(classInfo))
     const specsByNameObject = new Class(classDTOs).getTransformSpecsByName()
 
-    dao.specsByNameObject(specsByNameObject)
+    dao.insert(specsByNameObject)
   }
 };
