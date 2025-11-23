@@ -1,7 +1,7 @@
-import { rankingsService } from "../service/rankingsService";
+import { rankingsService } from "../service/rankingsService.js";
 
 export const rankingsController = {
-  async getGearDTOs() {
+  async getGearDTOs(encounterId, classId, specId) {
     let data = {};
     try {
       data = await rankingsService.loadRankingsData(
