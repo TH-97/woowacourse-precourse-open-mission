@@ -3,13 +3,13 @@ import { ERROR } from "../constants/index.js";
 export class GearDTO {
   #gearName;
   #gearIcon;
-  constructor(data) {
-    this.#validate(data);
-    this.#gearName = data.name;
-    this.#gearIcon = data.icon;
+  constructor({ name, icon }) {
+    this.#validate(name);
+    this.#gearName = name;
+    this.#gearIcon = icon;
   }
-  #validate(data) {
-    if (data.length === 0) throw new Error(ERROR.EMPTY);
+  #validate(name) {
+    if (!name) throw new Error(ERROR.EMPTY);
   }
 
   getGearName() {
