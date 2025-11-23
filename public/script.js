@@ -64,8 +64,7 @@ async function renderItems(items) {
   div.innerHTML = templateHtml;
   resultsContainer.appendChild(div);
   const item = items[0];
-  console.log(item);
-  // 단일 슬롯
+
   const singleSlots = [
     "head",
     "hands",
@@ -78,32 +77,31 @@ async function renderItems(items) {
     "wrist",
     "back",
   ];
+  const arraySlots = ["fingers", "mainHand", "trinkets"];
+  renderSingleSlots(div, item, singleSlots);
+  renderArraySlots(div, item, arraySlots);
 
-  singleSlots.forEach((slot) => {
+  resultsContainer.style.display = "block";
+}
+
+function renderSingleSlots(div, item, slots) {
+  slots.forEach((slot) => {
     div.querySelector(`#${slot} .item-name`).textContent = item[slot].name;
     div.querySelector(
       `#${slot} .item-icon`
     ).src = `https://wow.zamimg.com/images/wow/icons/large/${item[slot].icon}`;
   });
+}
 
-  // 배열 슬롯
-  const arraySlots = ["fingers", "mainHand", "trinkets"];
-
-  arraySlots.forEach((slot) => {
-    item[slot].forEach((gear, i) => {
-      console.log(slot, i);
-      div.querySelector(`#${slot}-${i} .item-name`).textContent = gear.name;
+function renderArraySlots(div, item, slots) {
+  slots.forEach((slot) => {
+    item[slot].forEach((gear, index) => {
+      div.querySelector(`#${slot}-${index} .item-name`).textContent = gear.name;
       div.querySelector(
-        `#${slot}-${i} .item-icon`
+        `#${slot}-${index} .item-icon`
       ).src = `https://wow.zamimg.com/images/wow/icons/large/${gear.icon}`;
     });
   });
-
-  // div.querySelector(
-  //   "#head .item-icon"
-  // ).src = `https://wow.zamimg.com/images/wow/icons/large/${item.head.icon}`;
-
-  resultsContainer.style.display = "block";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
