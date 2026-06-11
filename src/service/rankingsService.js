@@ -31,7 +31,7 @@ export const rankingsService = {
     );
 
     const data = await fs.readFile(fileUrl, "utf-8");
-    return data;
+    return JSON.parse(data);
   },
   async getGear(data) {
     const gearListDTOs = data.rankings.map(
